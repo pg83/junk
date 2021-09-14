@@ -1,0 +1,11 @@
+{% set lst = [] %}
+
+{% macro addf() %}
+{{lst.append(caller())}}
+{% endmacro %}
+
+{% for i in lst %}
+{{i}}
+{% endfor %}
+
+{{lst}}
